@@ -1,5 +1,6 @@
 # piiom-tool library
-Pixel Image Input, Output &amp; Memory tool library.
+
+Pixel Image Input, Output &amp; Memory tool library.  If you are looking for vector or model tools, this library may not suit your needs although it does support some texture formats and importing (and exporting) of vector image formats.
 
 !!! Warning !!!
 
@@ -64,7 +65,7 @@ An interface for image data
 
 ### class piiom.Stream interface implements piiom.supporters.EventTarget
 
-An interface for reading image data.
+An interface for tranforming / transfering image data.
 
 
 
@@ -110,8 +111,6 @@ target    | string          |           | path of file to be written
           | buffer          |           | https://nodejs.org/api/buffer.html#buffer_class_buffer
 options   | object          | { }       | see the piionWriter class constructor
 
-piiom.createReader( source:{path-string|buffer|readable-file-handler|readable-stream}, options?:{object} ):{piiomReader|false}:{piiomReader|false}
-piiom.createWriter( source:{path-string|buffer|writable-file-handler|writable-stream}, options?:{object} ):{piiomReader|false}:{piiomReader|false}
 
 piiomReader#addListener( type:{string|event|array}, callback, options?:{object|integer} )
 piiomReader#appendListener( type:{string|event|array}, callback, options?:{object|integer} ):{piiomEvent#|false}
@@ -123,15 +122,8 @@ piiomReader#emit( type:{string|event|array} )
 
 ## Image file / stream reading interface
 
-piiom.createReader( source:{path-string|buffer|file-handler|read-stream}, options?:{object} ):{piiomReader|false}:{piiomReader|false}
+@TODO: give details
 
-piiomReader#addListener( type:{string|event|array}, callback, options?:{object|integer} )
-piiomReader#appendListener( type:{string|event|array}, callback, options?:{object|integer} ):{piiomEvent#|false}
-piiomReader#prependListener( type:{string|event|array}, callback, options?:{object|integer} )
-piiomReader#on( type:{string|event|array}, callback, options?:{object|integer} )
-piiomReader#once( type:{string|event|array}, callback, options?:{object} )
-piiomReader#remove( type:{string|event|array}, callback )
-piiomReader#emit( type:{string|event|array} )
 
 ## Image file / stream / buffer writing interface
 

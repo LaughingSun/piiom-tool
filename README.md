@@ -1,7 +1,11 @@
 # piiom-tool library
 Pixel Image Input, Output &amp; Memory tool library.
 
-!!! Warning !!! At this time this repository is just a placeholder and contains no useful code or at most some testcases. !!! warning !!!
+!!! Warning !!!
+
+At this time this repository is just design / documentation / placeholder and contains no useful code or at most some testcases.
+
+!!! end of Warning !!!
 
 This tool library is specifically for pixel based file and memory formats and contains methods for reading from files, writing to files, structured memory dumping, structured memory manipulation, conversion to and from an extended raw format and analysis tools.  It is not intended as a graphics library in the sense of various filters, rotations and manipulations.  The purpose is to enable basic reading and writing of image files so that a target software can focus on its own target features.  It is our hope that piiom-tool library can be easily dropin / plugin for other projects.
 
@@ -15,17 +19,44 @@ There are basically 5 parts to the tool library, namely:
 + minimal manipulation interface
 
 Assuming:
-`const piiom = require( './piiom' );`
+`const piiom = require( 'piiom' );`
 
-## main class interfaces
-
-
-
-## supporting class interfaces
+## piiom module class interfaces
 
 
 
-## piiom object methods
+### class piiom.Reader interface
+
+An interface for reading image data.
+
+
+
+### class piiom.Writer interface
+
+An interface for writing
+
+### class piiom.Image interface
+
+An interface for image data
+
+
+
+### class piiom.Stream interface
+
+An interface for reading image data.
+
+
+
+## piiom module supporting class interfaces
+
+
+
+### piiom.piiomEvent
+
+A Event object used with listeners and event handling.
+
+
+## piiom module methods
 
 ### piiom.createReader( source, options? )
 

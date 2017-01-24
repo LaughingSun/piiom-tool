@@ -17,11 +17,39 @@ There are basically 5 parts to the tool library, namely:
 Assuming:
 `const piiom = require( './piiom' );`
 
-## piiom object methods
+## main class interfaces
 
 
 
 ## supporting class interfaces
+
+
+
+## piiom object methods
+
+### piiom.createReader( source, options? )
+
+returns a piiomReader instance or false on failure. see the piionReader class
+
+argument  | type(s)         | default   | description
+--------- | --------------- | --------- |------------------------------
+source    | string          |           | path of file to be read
+          | integer         |           | https://nodejs.org/api/all.html#fs_event_open
+          | stream.Readable |           | https://nodejs.org/api/stream.html#stream_class_stream_readable
+          | buffer          |           | https://nodejs.org/api/buffer.html#buffer_class_buffer
+options   | object          |           | see the piionReader class constructor
+
+### piiom.createWriter( target, options? )
+
+returns a piiomWriter instance or false on failure. see the piionReader class
+
+argument  | type(s)         | default   | description
+--------- | --------------- | --------- |------------------------------
+target    | string          |           | path of file to be written
+          | integer         |           | https://nodejs.org/api/all.html#fs_event_open
+          | stream.Readable |           | https://nodejs.org/api/stream.html#stream_class_stream_readable
+          | buffer          |           | https://nodejs.org/api/buffer.html#buffer_class_buffer
+options   | object          | { }       | see the piionWriter class constructor
 
 piiom.createReader( source:{path-string|buffer|readable-file-handler|readable-stream}, options?:{object} ):{piiomReader|false}:{piiomReader|false}
 piiom.createWriter( source:{path-string|buffer|writable-file-handler|writable-stream}, options?:{object} ):{piiomReader|false}:{piiomReader|false}

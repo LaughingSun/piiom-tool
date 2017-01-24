@@ -40,6 +40,8 @@ Following is a summary list of the key parts of the tool libraryy:
 + analyzer interface
 + minimalist manipulation interface
 
+# api design information
+
 Assuming:
 `const piiom = require( 'piiom' );`
 

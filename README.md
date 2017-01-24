@@ -8,19 +8,48 @@ This tool library is specifically for pixel based file and memory formats and co
 # features
 
 There are basically 5 parts to the tool library, namely:
-+ image file / stream reader interface
-+ image file writer interface
++ supporting class interfaces
++ image file / buffer / stream reader / writer interfaces
 + image buffer interface
 + analyzer interface
 + minimal manipulation interface
 
+Assuming:
+`const piiom = require( './piiom' );`
+
+## piiom object methods
+
+
+
+## supporting class interfaces
+
+piiom.createReader( source:{path-string|buffer|readable-file-handler|readable-stream}, options?:{object} ):{piiomReader|false}:{piiomReader|false}
+piiom.createWriter( source:{path-string|buffer|writable-file-handler|writable-stream}, options?:{object} ):{piiomReader|false}:{piiomReader|false}
+
+piiomReader#addListener( type:{string|event|array}, callback, options?:{object|integer} )
+piiomReader#appendListener( type:{string|event|array}, callback, options?:{object|integer} ):{piiomEvent#|false}
+piiomReader#prependListener( type:{string|event|array}, callback, options?:{object|integer} )
+piiomReader#on( type:{string|event|array}, callback, options?:{object|integer} )
+piiomReader#once( type:{string|event|array}, callback, options?:{object} )
+piiomReader#remove( type:{string|event|array}, callback )
+piiomReader#emit( type:{string|event|array} )
+
 ## Image file / stream reading interface
 
+piiom.createReader( source:{path-string|buffer|file-handler|read-stream}, options?:{object} ):{piiomReader|false}:{piiomReader|false}
+
+piiomReader#addListener( type:{string|event|array}, callback, options?:{object|integer} )
+piiomReader#appendListener( type:{string|event|array}, callback, options?:{object|integer} ):{piiomEvent#|false}
+piiomReader#prependListener( type:{string|event|array}, callback, options?:{object|integer} )
+piiomReader#on( type:{string|event|array}, callback, options?:{object|integer} )
+piiomReader#once( type:{string|event|array}, callback, options?:{object} )
+piiomReader#remove( type:{string|event|array}, callback )
+piiomReader#emit( type:{string|event|array} )
+
+## Image file / stream / buffer writing interface
+
 @TODO: give details
 
-## Image file / stream writing interface
-
-@TODO: give details
 
 ## Image buffer interface
 

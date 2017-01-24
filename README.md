@@ -25,23 +25,23 @@ Assuming:
 
 
 
-### class piiom.Reader interface
+### class piiom.Reader interface implements piiom.Stream
 
 An interface for reading image data.
 
 
 
-### class piiom.Writer interface
+### class piiom.Writer interface implements piiom.Stream
 
 An interface for writing
 
-### class piiom.Image interface
+### class piiom.Image interface implements piiom.supporters.EventTarget
 
 An interface for image data
 
 
 
-### class piiom.Stream interface
+### class piiom.Stream interface implements piiom.supporters.EventTarget
 
 An interface for reading image data.
 
@@ -51,9 +51,16 @@ An interface for reading image data.
 
 
 
-### piiom.piiomEvent
+### piiom.supporting.EventTarget
+
+A target that supports event object used with listeners and event handling.
+
+
+
+### piiom.supporting.Event
 
 A Event object used with listeners and event handling.
+
 
 
 ## piiom module methods

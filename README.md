@@ -1,4 +1,4 @@
-# piiom-tool-library
+# piiom-tool library
 Pixel Image Input, Output &amp; Memory tool library.
 
 !!! Warning !!! At this time this repository is just a placeholder and contains no useful code or at most some testcases. !!! warning !!!
